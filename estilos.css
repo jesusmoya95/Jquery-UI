@@ -1,0 +1,285 @@
+body{
+    background-color: rgb(245, 245, 245);
+    padding: 0px;
+    margin: 0px;
+}
+
+.titulo_pagina{
+    position: relative;
+    top: -170px;
+    color: dodgerblue;
+    font-family: 'Harrington';
+    font-weight: bold;
+    font-size: 70px;
+    text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000;
+}
+.cabecera{
+    margin-bottom: 60px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.cabecera-linea{
+    background-color: rgb(12, 201, 214);
+    margin-bottom: 30px;
+    font-size: 35px;
+    padding: 0;
+    color: white;
+    font-family: 'Harrington';
+    font-weight: bold;
+    text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000;
+    /*text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;*/
+}
+
+.imagen-cabecera {
+    
+    width: 100%;
+    margin: 0 0px 60px 0px;
+    padding: 0;
+}
+
+.imagen-cabecera img{
+    margin: 0;
+    padding: 0 0;
+    width: 100%;
+   
+}
+.cabecera .carousel-item{
+    height: 371px;
+}
+
+.cabecera > div{
+    margin: auto 0;
+    padding: auto 0;
+}
+
+.cabecera_titulo{
+    text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000;
+}
+
+.overflow {
+    height: 110px;
+}
+
+.bt-buscar{
+    padding: 0 10px 10px 10px;
+    margin: 0;
+    background-color: white;
+}
+
+.widget{
+    background-color: white;
+    padding-top: 20px;
+}
+
+.ui-checkboxradio-checked{
+    background: rgb(41, 164, 235);
+ }
+
+ .donde{
+     font-size: 24px;
+     font-weight: bold;
+ }
+
+.tipo{
+    font-size: 15px;
+}
+
+.caracteristicas .ui-widget{
+    font-size: 15px;
+}
+
+.caracteristicas button{
+    display: block;
+}
+
+
+.dialogo{
+    width: 60% !important;
+    font-size: 14px !important;
+    position: relative !important;
+    text-align: left !important;
+
+}
+.dialogo .ui-checkboxradio-checked{
+    background: rgb(41, 164, 235);
+}
+
+.caracteristicas_1{
+    width: 160px;
+    float: left;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(243, 243, 243)
+}
+
+.caracteristicas_1 input, .caracteristicas_1 label{
+    display: block;
+}
+
+.bt-buscar{
+    display: block;
+    width: 100%;
+}
+
+
+
+a:link{
+    text-decoration: none;
+    color: greenyellow;
+}
+
+a:visited{
+    color: greenyellow;
+}
+
+a:active{
+    color: greenyellow;
+}
+
+a:hover{
+    color: greenyellow;
+}
+
+.anuncio .carousel-inner{
+    height: 350px;
+    border-radius: 15px;
+}
+
+.anuncio-resumen .carousel-inner{
+    height: 250px;
+    border-radius: 15px;
+}
+
+.titulo-anuncio-resumen, .precio-anuncio-resumen{
+    font-size: 28px;
+    font-family: 'Harrington';
+    font-weight: bold;
+}
+
+.anuncio-resumen .cuerpo-anuncio{
+    display: inline;
+    margin: 0 5px;
+}
+.titulo-anuncio{
+    font-family: 'Harrington';
+}
+
+.cuerpo-anuncio{
+    color: gray;
+}
+
+.cuerpo-anuncio span{
+    color: black;
+}
+
+.cuerpo-anuncio img{
+    width: 20px;
+}
+
+
+.anuncio .carousel-inner img:hover{
+    transform: scale(1.5);
+    position: absolute;
+    float: initial
+}
+
+.anuncio{
+    background-color: white;
+    border: gray solid 1px;
+    padding-top: 10px;
+}
+
+.anuncio-resumen{
+    border: gray solid 1px;
+    background-color: white;
+    padding-top: 10px;
+    height: 420px;
+}
+
+/* Clasificacion anuncios*/
+.clasificacion label{
+    color: grey;
+    font-size: 20px;
+}
+
+.clasificacion input[type = "radio"]{
+    display: none;
+}
+
+.clasificacion{
+    direction: rtl;/* right to left */
+    unicode-bidi: bidi-override;/* bidi de bidireccional */
+}
+
+.clasificacion label:hover, .clasificacion label:hover ~ label{
+    color: orange;
+}
+
+.clasificacion input[type = "radio"]:checked ~ label{
+    color: orange;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 575px) { 
+    .titulo-anuncio{
+        font-size: 24px;
+    }
+    .precio-anuncio{
+        font-size: 24px;
+    }
+    .cuerpo-anuncio{
+        margin: 3px; 
+    }
+    .anuncio-resumen .carousel-inner{
+        height: 280px;
+    }
+    .cabecera .carousel-item{
+        height: 200px;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767px) { 
+    .titulo-anuncio{
+        font-size: 24px;
+    }
+    .precio-anuncio{
+        font-size: 24px;
+    }
+    .anuncio .carousel-inner{
+        height: 250px;
+    }
+    .anuncio-resumen .carousel-inner{
+        height: 180px;
+    }
+    .cabecera .carousel-item{
+        height: 240px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) { 
+    .cabecera .carousel-item{
+        height: 300px;
+    }
+    .anuncio .carousel-inner{
+        height: 280px;
+    }
+}
+
+
+@media (min-width: 992px) { 
+
+}
