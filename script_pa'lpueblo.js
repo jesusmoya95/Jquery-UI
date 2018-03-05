@@ -10,6 +10,11 @@ $(function(){
 
     // Buscar sitio
     $("#donde").autocomplete({
+        source: poblaciones,
+        minLength: 2
+    });
+
+    $("#dojnde").autocomplete({
         source: function (request, response) {
             $.getJSON("./ciudades.json", function (data) {
                 response($.map(data, function (value, key) {
