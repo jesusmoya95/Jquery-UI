@@ -9,8 +9,66 @@ $(function(){
     $( ".buscador" ).controlgroup();
 
     // Buscar sitio
-    $( "#donde" ).autocomplete({
-        source: provincias
+    $("#donde").autocomplete({
+        source: function (request, response) {
+            $.getJSON("./ciudades.json", function (data) {
+                response($.map(data, function (value, key) {
+                    return {
+                        label: value,
+                        value: key.nm
+                    };
+                }));
+            });
+        },
+        minLength: 2,
+    });
+
+
+    $( "#doeeeende" ).autocomplete({
+    source: function( request, response ) {
+        $.ajax( {
+            url: "ciudades.json",
+            type: "get",
+            dataType: "json",
+            data: {
+                term: request.term
+            },
+        }
+        .done(function (data) {
+            var options = $("#country");
+            $.each(data[0], function (idx, val) {
+            options.append($('<option />', { value: idx, text: val.cname }));
+            });
+        })
+        .fail(function(jqXHR, status, error) {
+ 
+        }) );
+    },
+    minLength: 2,
+    select: function( event, ui ) {
+        log( "Selected: " + ui.item.value + " aka " + ui.item.id );
+    }
+    } );
+
+
+    $("#dssonde").autocomplete({
+        source: function (request, response) {
+            var matcher = new RegExp( $.ui.autocomplete.escapeRegex(request.term), "i" );
+            $.ajax({
+                url: "./ciudades.json",
+                dataType: "json",
+                success: function (data) {
+                    response($.map(data, function(v,i){
+                        var text = v.mn;
+                            return {
+                                    label: v.nm,
+                                    value: v.nm
+                                   };
+                        
+                    }));
+                }
+            });
+        }
     });
 
     // Date llegada
