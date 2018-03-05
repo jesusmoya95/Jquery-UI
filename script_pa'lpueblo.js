@@ -4,7 +4,44 @@ provincias = ['Alava','Albacete','Alicante','Almería','Asturias','Avila','Badaj
             'Pontevedra','La Rioja','Salamanca','Segovia','Sevilla','Soria','Tarragona','Santa Cruz de Tenerife','Teruel','Toledo','Valencia',
             'Valladolid','Vizcaya','Zamora','Zaragoza']
 
-$(function(){
+function changeTest () {
+    if ($( "#thema" ).val() == "rojo"){
+        $( "#tema" ).removeClass();
+        $( "#tema" ).addClass("rojo");
+    }
+    if ($( "#thema" ).val() == "verde"){
+        $( "#tema" ).removeClass();
+        $( "#tema" ).addClass("verde");
+    }
+    if ($( "#thema" ).val() == "azul"){
+        $( "#tema" ).removeClass();
+    }
+}
+
+
+$(document).ready(function(){
+
+    var thema = $( "#thema" ).val();
+    console.log(thema);
+
+    
+
+    $( "#thema" ).change(function(){
+        console.log($( "#thema" ).val());
+       
+            if ($( "#thema" ).val() == "rojo"){
+                $( "#tema" ).removeClass();
+                $( "#tema" ).addClass("rojo");
+            }
+            if ($( "#thema" ).val() == "verde"){
+                $( "#tema" ).removeClass();
+                $( "#tema" ).addClass("verde");
+            }
+            if ($( "#thema" ).val() == "azul"){
+                $( "#tema" ).removeClass();
+            }
+    }).change();
+
 
     $( ".buscador" ).controlgroup();
 
