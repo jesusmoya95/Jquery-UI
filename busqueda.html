@@ -6,56 +6,63 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="shortcut icon" href="./imagenes/favicon.png">
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-        <link rel="stylesheet" href="estilos.css">
+        <link rel="stylesheet" href="./link/bootstrap.min.css">
+        <link rel="stylesheet" href="./link/jquery-ui.min.css">
+        <link rel="stylesheet" href="./estilos.css">
+        <link rel="stylesheet" href="./thema-verde/jquery-ui.css">
+        <link rel="stylesheet" href="./thema-rojo/jquery-ui.css">
     </head>
     <body>
         <div class="container">
-            <div class="row cabecera no-gutters">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="row cabecera">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12" style="padding:0px; margin:0px;">
+
                     <div class="row cabecera-linea">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-12" >
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 buscador">
                             <a href="index.html"><div>Pa'l Pueblo</div></a> 
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-12 col-sm-6 col-md-6 col-lg-6 widget buscador">
-                            <form>
-                                <div class="form-group donde">
-                                    <label for="donde">Donde</label>
-                                    <input type="text" id="donde" placeholder="Granada" class="form-control" value="Granada">
-                                </div>
-                                <div class="form-check tipo">
+            
+                            <div class="form-group donde">
+                                <label for="donde">Donde</label>
+                                <input type="text" id="donde" placeholder="Granada" class="form-control">
+                            </div>
+                            <div class="row tipo">
+                                <div class="col-4 col-sm-12 col-md-4 col-lg-4">
                                     <label for="piso">Piso</label>
                                     <input type="checkbox" name="piso" id="piso" checked="checked">
+                                </div>
+                                <div class="col-4 col-sm-12 col-md-4 col-lg-4">
                                     <label for="casa">Casa</label>
-                                    <input type="checkbox" name="casa" id="casa" checked="checked">
+                                    <input type="checkbox" name="casa" id="casa">
+                                </div>
+                                <div class="col-4 col-sm-12 col-md-4 col-lg-4">
                                     <label for="cueva">Cueva</label>
-                                    <input type="checkbox" name="cueva" id="cueva" checked="checked">
+                                    <input type="checkbox" name="cueva" id="cueva">
                                 </div>
-                                <div class="form-group">
-                                    <p>Llegada: <input type="text" id="llegada"></p>
-                                </div>
-                                <div class="form-group">
-                                    <p>Salida: <input type="text" id="salida"></p>
-                                </div>
-                            </form>
+                            </div>
+                            <div class="form-group">
+                                <p>Llegada: <input type="text" id="llegada"></p>
+                            </div>
+                            <div class="form-group">
+                                <p>Salida: <input type="text" id="salida"></p>
+                            </div>
+                            
                         </div>
                         <div class="col-12 col-sm-6 col-md-6 col-lg-6 widget buscador">
-                            <form>
                                 <div class="form-group">
                                     <label for="personas">Personas:</label>
                                     <select name="personas" id="personas">
                                         <option value="1">1</option>
-                                        <option value="2">2</option>
+                                        <option value="2" selected="selected">2</option>
                                         <option value="3">3</option>
                                         <option value="4">4</option>
                                         <option value="5">5</option>
                                         <option value="6">6</option>
                                         <option value="7">7</option>
-                                        <option value="8" selected="selected">8</option>
+                                        <option value="8">8</option>
                                         <option value="9">9</option>
                                         <option value="10">10</option>
                                         <option value="11">11</option>
@@ -75,141 +82,191 @@
                                     <div id="slider-range"></div>
                                 </div>
     
-                                <div class="form-check caracteristicas">
-                                    <p>Características</p>
-                                    <label for="barbacoa">Barbacoa</label>
-                                    <input type="checkbox" name="barbacoa" id="barbacoa" checked="checked">
-    
-                                    <label for="internet">Acceso a internet</label>
-                                    <input type="checkbox" name="internet" id="internet">
-    
-                                    <label for="calefaccion">Calefacción</label>
-                                    <input type="checkbox" name="calefaccion" id="calefaccion">
-                                    
-                                    <div id="dialog" title="Más características">
-                                        <div class="caracteristicas_1">
-                                            <p>Exterior</p>
-    
-                                            <label for="huerto">Huerto</label>
-                                            <input type="checkbox" name="huerto" id="huerto">
-            
-                                            <label for="jardin">Jardín</label>
-                                            <input type="checkbox" name="jardin" id="jardin">
-            
-                                            <label for="piscina">Piscina</label>
-                                            <input type="checkbox" name="piscina" id="piscina">
-    
-                                            <label for="aparcamiento">Aparcamiento</label>
-                                            <input type="checkbox" name="aparcamiento" id="aparcamiento">
-                                        
-                                            <p>Para discapacitados</p>
-    
-                                            <label for="discapacitados">Habitación adaptada para discapacitados</label>
-                                            <input type="checkbox" name="discapacitados" id="discapacitados">
-                
-                                        </div>
-    
-                                    
-                                        <div class="caracteristicas_1">
-                                            <p>Interior del alojamiento</p>
-    
-                                            <label for="aire">Aire acondicionado</label>
-                                            <input type="checkbox" name="aire" id="aire">
-            
-                                            <label for="hidromasaje">Bañera de hidromasaje</label>
-                                            <input type="checkbox" name="hidromasaje" id="hidromasaje">
-            
-                                            <label for="baño_habitacion">Baño en Habitación</label>
-                                            <input type="checkbox" name="baño_habitacion" id="baño_habitacion">
-    
-                                            <label for="biblioteca">Biblioteca</label>
-                                            <input type="checkbox" name="biblioteca" id="biblioteca">
-    
-                                            <label for="billar">Billar</label>
-                                            <input type="checkbox" name="billar" id="billar">
-            
-                                            <label for="cocina">Cocina</label>
-                                            <input type="checkbox" name="cocina" id="cocina">
-            
-                                            <label for="comedor">Comedor</label>
-                                            <input type="checkbox" name="comedor" id="comedor">
-    
-                                            <label for="dvd_video">DVD o vídeo</label>
-                                            <input type="checkbox" name="dvd_video" id="dvd_video">
-    
-                                            <label for="equipo_musica">Equipo de música</label>
-                                            <input type="checkbox" name="equipo_musica" id="equipo_musica">
-                                        </div>
-                                        <div class="caracteristicas_1">
-                                            <label for="futbolin">Futbolín</label>
-                                            <input type="checkbox" name="futbolin" id="futbolin">
+                                <div class="row caracteristicas">
+                                        <p>Características</p>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                        <label for="barbacoa">Barbacoa</label>
+                                        <input type="checkbox" name="barbacoa" id="barbacoa">
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                        <label for="internet">Acceso a internet</label>
+                                        <input type="checkbox" name="internet" id="internet">
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                        <label for="calefaccion">Calefacción</label>
+                                        <input type="checkbox" name="calefaccion" id="calefaccion">
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                        <button id="opener">Más características</button>
+                                        <div id="dialog" title="Más características" class="rojo">
+                                            <div class="row caracteristicas_1 ">
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                    <p>Exterior</p>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="huerto">Huerto</label>
+                                                    <input type="checkbox" name="huerto" id="huerto">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="jardin">Jardín</label>
+                                                    <input type="checkbox" name="jardin" id="jardin">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="piscina">Piscina</label>
+                                                    <input type="checkbox" name="piscina" id="piscina">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="aparcamiento">Aparcamiento</label>
+                                                    <input type="checkbox" name="aparcamiento" id="aparcamiento">
+                                                </div>
+                                                
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                    <p>Para discapacitados</p>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="discapacitados">Habitación adaptada para discapacitados</label>
+                                                    <input type="checkbox" name="discapacitados" id="discapacitados">
+                                                </div>
+                                            </div>
                                             
-                                            <label for="jacuzzi">Jacuzzi</label>
-                                            <input type="checkbox" name="jacuzzi" id="jacuzzi">
-            
-                                            <label for="lavadora">Lavadora</label>
-                                            <input type="checkbox" name="lavadora" id="lavadora">
-    
-                                            <label for="lavavajillas">Lavavajillas</label>
-                                            <input type="checkbox" name="lavavajillas" id="lavavajillas">
-    
-                                            <label for="microondas">Microondas</label>
-                                            <input type="checkbox" name="microondas" id="microondas">
-            
-                                            <label for="ping_pong">Ping pong</label>
-                                            <input type="checkbox" name="ping_pong" id="ping_pong">
-            
-                                            <label for="piscina_climatizada">Piscina climatizada</label>
-                                            <input type="checkbox" name="piscina_climatizada" id="piscina_climatizada">
-    
-                                            <label for="sala_eventos">Sala para eventos</label>
-                                            <input type="checkbox" name="sala_eventos" id="sala_eventos">
-    
-                                            <label for="sauna">Sauna</label>
-                                            <input type="checkbox" name="sauna" id="sauna">
-            
-                                            <label for="spa">Spa</label>
-                                            <input type="checkbox" name="spa" id="spa">
-            
-                                            <label for="television">Televisión</label>
-                                            <input type="checkbox" name="television" id="television">
+                                            <div class="row caracteristicas_1">
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                    <p>Interior del alojamiento</p>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="aire">Aire acondicionado</label>
+                                                    <input type="checkbox" name="aire" id="aire">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="hidromasaje">Bañera de hidromasaje</label>
+                                                    <input type="checkbox" name="hidromasaje" id="hidromasaje">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="baño_habitacion">Baño en Habitación</label>
+                                                    <input type="checkbox" name="baño_habitacion" id="baño_habitacion">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="biblioteca">Biblioteca</label>
+                                                    <input type="checkbox" name="biblioteca" id="biblioteca">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="billar">Billar</label>
+                                                    <input type="checkbox" name="billar" id="billar">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="cocina">Cocina</label>
+                                                    <input type="checkbox" name="cocina" id="cocina">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="comedor">Comedor</label>
+                                                    <input type="checkbox" name="comedor" id="comedor">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="dvd_video">DVD o vídeo</label>
+                                                    <input type="checkbox" name="dvd_video" id="dvd_video">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="equipo_musica">Equipo de música</label>
+                                                    <input type="checkbox" name="equipo_musica" id="equipo_musica">
+                                                </div>
+                                            </div>
+
+                                            <div class="row caracteristicas_1">
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="futbolin">Futbolín</label>
+                                                    <input type="checkbox" name="futbolin" id="futbolin">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="jacuzzi">Jacuzzi</label>
+                                                    <input type="checkbox" name="jacuzzi" id="jacuzzi">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="lavadora">Lavadora</label>
+                                                    <input type="checkbox" name="lavadora" id="lavadora">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="lavavajillas">Lavavajillas</label>
+                                                    <input type="checkbox" name="lavavajillas" id="lavavajillas">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="microondas">Microondas</label>
+                                                    <input type="checkbox" name="microondas" id="microondas">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="ping_pong">Ping pong</label>
+                                                    <input type="checkbox" name="ping_pong" id="ping_pong">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="piscina_climatizada">Piscina climatizada</label>
+                                                    <input type="checkbox" name="piscina_climatizada" id="piscina_climatizada">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="sala_eventos">Sala para eventos</label>
+                                                    <input type="checkbox" name="sala_eventos" id="sala_eventos">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="sauna">Sauna</label>
+                                                    <input type="checkbox" name="sauna" id="sauna">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="spa">Spa</label>
+                                                    <input type="checkbox" name="spa" id="spa">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="television">Televisión</label>
+                                                    <input type="checkbox" name="television" id="television">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group caracteristicas_1">
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                    <p>Servicios</p>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="actividades_niños">Actividades para niños</label>
+                                                    <input type="checkbox" name="actividades_niños" id="actividades_niños">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="animales">Admite animales</label>
+                                                    <input type="checkbox" name="animales" id="animales">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="bicicleta">Bicicleta disponible</label>
+                                                    <input type="checkbox" name="bicicleta" id="bicicleta">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="cuna">Cuna disponible</label>
+                                                    <input type="checkbox" name="cuna" id="cuna">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="guia">Paseos con guía</label>
+                                                    <input type="checkbox" name="guia" id="guia">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="restaurante">Restaurante</label>
+                                                    <input type="checkbox" name="restaurante" id="restaurante">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="cenas">Se sirven cenas</label>
+                                                    <input type="checkbox" name="cenas" id="cenas">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="comidas">Se sirven comidas</label>
+                                                    <input type="checkbox" name="comidas" id="comidas">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="desayunos">Se sirven desayunos</label>
+                                                    <input type="checkbox" name="desayunos" id="desayunos">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <label for="canguro">Servicio canguro</label>
+                                                    <input type="checkbox" name="canguro" id="canguro">
+                                                </div>                                     
+                                            </div>     
                                         </div>
-                                        <div class="caracteristicas_1">
-                                            <p>Servicios</p>
-                                            <label for="actividades_niños">Actividades para niños</label>
-                                            <input type="checkbox" name="actividades_niños" id="actividades_niños">
-                                            
-                                            <label for="animales">Admite animales</label>
-                                            <input type="checkbox" name="animales" id="animales">
-            
-                                            <label for="bicicleta">Bicicleta disponible</label>
-                                            <input type="checkbox" name="bicicleta" id="bicicleta">
-    
-                                            <label for="cuna">Cuna disponible</label>
-                                            <input type="checkbox" name="cuna" id="cuna">
-    
-                                            <label for="guia">Paseos con guía</label>
-                                            <input type="checkbox" name="guia" id="guia">
-            
-                                            <label for="restaurante">Restaurante</label>
-                                            <input type="checkbox" name="restaurante" id="restaurante">
-            
-                                            <label for="cenas">Se sirven cenas</label>
-                                            <input type="checkbox" name="cenas" id="cenas">
-    
-                                            <label for="comidas">Se sirven comidas</label>
-                                            <input type="checkbox" name="comidas" id="comidas">
-    
-                                            <label for="desayunos">Se sirven desayunos</label>
-                                            <input type="checkbox" name="desayunos" id="desayunos">
-            
-                                            <label for="canguro">Servicio canguro</label>
-                                            <input type="checkbox" name="canguro" id="canguro">                                        
-                                        </div>     
                                     </div>
                                 </div>
-                            </form>
-                            <button id="opener">Más características</button>
+
                         </div>
                     </div>
                 </div>
@@ -223,8 +280,9 @@
                         </div>
                     </div>
                 </div>
-
             </div>
+
+            <!-- Anuncios -->
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 anuncio">
@@ -499,10 +557,10 @@
             </div>
         </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="./link/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="./link/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="./link/jquery-ui.min.js"></script>
         <script src="script_pa'lpueblo.js"></script>
         <script src="poblaciones.js"></script>
     

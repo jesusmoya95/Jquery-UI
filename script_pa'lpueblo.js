@@ -4,7 +4,7 @@ provincias = ['Alava','Albacete','Alicante','Almería','Asturias','Avila','Badaj
             'Pontevedra','La Rioja','Salamanca','Segovia','Sevilla','Soria','Tarragona','Santa Cruz de Tenerife','Teruel','Toledo','Valencia',
             'Valladolid','Vizcaya','Zamora','Zaragoza']
 
-function changeTest () {
+/*function changeTest () {
     if ($( "#thema" ).val() == "rojo"){
         $( "#tema" ).removeClass();
         $( "#tema" ).addClass("rojo");
@@ -17,11 +17,11 @@ function changeTest () {
         $( "#tema" ).removeClass();
     }
 }
-
+*/
 
 $(document).ready(function(){
 
-    var thema = $( "#thema" ).val();
+    /*var thema = $( "#thema" ).val();
     console.log(thema);
 
     
@@ -41,7 +41,7 @@ $(document).ready(function(){
                 $( "#tema" ).removeClass();
             }
     }).change();
-
+*/
 
     $( ".buscador" ).controlgroup();
 

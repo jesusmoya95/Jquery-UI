@@ -83,6 +83,33 @@ body{
 
 .tipo{
     font-size: 15px;
+    padding: 0px;
+}
+
+input{
+    display: block;
+    width: 100%;
+}
+
+label, .caracteristicas p, .caracteristicas_1 p, .buscador p{
+    display: block;
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+select{
+    width: 100%;
+    text-align: center;
+}
+
+.ui-button{
+    width: 100% !important;
+    border-radius: 3px !important;
+}
+
+.caracteristicas{
+    padding: 0;
 }
 
 .caracteristicas .ui-widget{
@@ -117,27 +144,45 @@ body{
     display: block;
 }
 
+.caracteristicas_1{
+    width: 100%;
+}
+
+
 .bt-buscar{
     display: block;
     width: 100%;
 }
 
+.cabecera-linea div{
+    background-color: rgb(88, 146, 255);
+}
 
+.cabecera-linea .ui-button{
+    background: rgb(88, 146, 255);
+    border: none;
+}
 
-a:link{
+.cabecera-linea a{
+    text-decoration: none;
+    color: greenyellow;
+    background-color: rgb(88, 146, 255) !important;
+}
+
+.cabecera-linea a:link{
     text-decoration: none;
     color: greenyellow;
 }
 
-a:visited{
+.cabecera-linea a:visited{
     color: greenyellow;
 }
 
-a:active{
+.cabecera-linea a:active{
     color: greenyellow;
 }
 
-a:hover{
+.cabecera-linea a:hover{
     color: greenyellow;
 }
 
@@ -203,6 +248,7 @@ a:hover{
 .clasificacion label{
     color: grey;
     font-size: 20px;
+    display: inline;
 }
 
 .clasificacion input[type = "radio"]{
@@ -265,6 +311,10 @@ a:hover{
     }
     .cabecera_titulo{
         font-size: 30px;
+    }
+    .donde label{
+        display: none;
+        
     }
 }
 
